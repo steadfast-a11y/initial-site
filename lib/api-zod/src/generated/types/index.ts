@@ -6,4 +6,9 @@
  * OpenAPI spec version: 0.1.0
  */
 
+export * from "./contactFormBody";
+export * from "./contactFormBodyBudgetRange";
+export * from "./contactFormBodyTimeline";
+export * from "./contactFormResponse";
 export * from "./healthStatus";
+export * from "./validationError";

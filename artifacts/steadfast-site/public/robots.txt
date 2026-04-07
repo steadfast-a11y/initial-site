@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://steadfast-accessibility.com/sitemap.xml

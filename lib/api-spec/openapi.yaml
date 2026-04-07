@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: contact
+    description: Contact form submissions
 paths:
   /healthz:
     get:
@@ -24,6 +26,31 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /contact:
+    post:
+      operationId: submitContactForm
+      tags: [contact]
+      summary: Submit contact inquiry form
+      description: Stores a contact form submission from a potential client
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContactFormBody"
+      responses:
+        "201":
+          description: Submission accepted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactFormResponse"
+        "422":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ValidationError"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +60,58 @@ components:
           type: string
       required:
         - status
-
+    ContactFormBody:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 1
+        email:
+          type: string
+          format: email
+        company:
+          type: string
+        websiteUrl:
+          type: string
+        budgetRange:
+          type: string
+          enum:
+            - "Under $2,500"
+            - "$2,500–$5,000"
+            - "$5,000–$8,000"
+            - "$8,000+"
+            - "Not sure yet"
+        timeline:
+          type: string
+          enum:
+            - "Urgent — I have a demand letter"
+            - "Within 30 days"
+            - "Within 90 days"
+            - "Just exploring"
+        message:
+          type: string
+          minLength: 1
+      required:
+        - name
+        - email
+        - websiteUrl
+        - message
+    ContactFormResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+      required:
+        - success
+        - message
+    ValidationError:
+      type: object
+      properties:
+        error:
+          type: string
+        details:
+          type: string
+      required:
+        - error

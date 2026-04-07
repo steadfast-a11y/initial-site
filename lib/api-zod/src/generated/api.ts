@@ -14,3 +14,33 @@ import * as zod from "zod";
 export const HealthCheckResponse = zod.object({
   status: zod.string(),
 });
+
+/**
+ * Stores a contact form submission from a potential client
+ * @summary Submit contact inquiry form
+ */
+
+export const SubmitContactFormBody = zod.object({
+  name: zod.string().min(1),
+  email: zod.string().email(),
+  company: zod.string().optional(),
+  websiteUrl: zod.string(),
+  budgetRange: zod
+    .enum([
+      "Under $2,500",
+      "$2,500–$5,000",
+      "$5,000–$8,000",
+      "$8,000+",
+      "Not sure yet",
+    ])
+    .optional(),
+  timeline: zod
+    .enum([
+      "Urgent — I have a demand letter",
+      "Within 30 days",
+      "Within 90 days",
+      "Just exploring",
+    ])
+    .optional(),
+  message: zod.string().min(1),
+});

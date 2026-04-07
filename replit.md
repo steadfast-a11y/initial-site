@@ -16,6 +16,29 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - **API codegen**: Orval (from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
 
+## Artifacts
+
+### Steadfast Accessibility Marketing Website (`artifacts/steadfast-site`)
+- **Type**: React + Vite (static frontend)
+- **Preview path**: `/` (root)
+- **Purpose**: Marketing and lead-generation site for Steadfast Accessibility LLC
+- **Pages**: Home, Services, About, Contact, Resources (with 3 articles), Accessibility Statement, 404
+- **Tech**: React 19, wouter routing, Tailwind CSS, framer-motion, react-helmet-async for SEO
+- **Contact form**: POSTs to `/api/contact` using generated `useSubmitContactForm` hook
+
+### API Server (`artifacts/api-server`)
+- **Type**: Express 5
+- **Preview path**: `/api`
+- **Routes**: `GET /api/healthz`, `POST /api/contact`
+- **Contact form route**: Validates with Zod, stores to `contact_submissions` table in PostgreSQL
+
+## Database
+
+- **Provider**: Replit PostgreSQL (via DATABASE_URL secret)
+- **ORM**: Drizzle
+- **Schema**: `lib/db/src/schema/`
+  - `contact_submissions` — stores inquiry form submissions (name, email, company, websiteUrl, budgetRange, timeline, message, createdAt)
+
 ## Key Commands
 
 - `pnpm run typecheck` — full typecheck across all packages

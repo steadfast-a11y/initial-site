@@ -8,3 +8,46 @@
 export interface HealthStatus {
   status: string;
 }
+
+export type ContactFormBodyBudgetRange =
+  (typeof ContactFormBodyBudgetRange)[keyof typeof ContactFormBodyBudgetRange];
+
+export const ContactFormBodyBudgetRange = {
+  "Under_$2,500": "Under $2,500",
+  "$2,500–$5,000": "$2,500–$5,000",
+  "$5,000–$8,000": "$5,000–$8,000",
+  "$8,000+": "$8,000+",
+  Not_sure_yet: "Not sure yet",
+} as const;
+
+export type ContactFormBodyTimeline =
+  (typeof ContactFormBodyTimeline)[keyof typeof ContactFormBodyTimeline];
+
+export const ContactFormBodyTimeline = {
+  "Urgent_—_I_have_a_demand_letter": "Urgent — I have a demand letter",
+  Within_30_days: "Within 30 days",
+  Within_90_days: "Within 90 days",
+  Just_exploring: "Just exploring",
+} as const;
+
+export interface ContactFormBody {
+  /** @minLength 1 */
+  name: string;
+  email: string;
+  company?: string;
+  websiteUrl: string;
+  budgetRange?: ContactFormBodyBudgetRange;
+  timeline?: ContactFormBodyTimeline;
+  /** @minLength 1 */
+  message: string;
+}
+
+export interface ContactFormResponse {
+  success: boolean;
+  message: string;
+}
+
+export interface ValidationError {
+  error: string;
+  details?: string;
+}
