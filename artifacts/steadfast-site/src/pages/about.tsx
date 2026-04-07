@@ -7,8 +7,15 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>About | Steadfast Accessibility</title>
-        <meta name="description" content="Learn about Dan Harrison and the Steadfast Accessibility methodology for ADA website compliance." />
+        <title>About Dan Harrison | Steadfast Accessibility</title>
+        <meta name="description" content="13 years as Executive Director of UX Design at JPMorgan Chase. DHS Trusted Tester v5 Certified. IAAP CPACC. Now bringing enterprise-quality accessibility auditing to small businesses." />
+        <meta property="og:title" content="About Dan Harrison | Steadfast Accessibility" />
+        <meta property="og:description" content="13 years leading accessibility strategy at JPMorgan Chase. Now bringing enterprise-quality auditing to small businesses at small business prices." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://steadfast-accessibility.com/about" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Dan Harrison | Steadfast Accessibility" />
+        <meta name="twitter:description" content="13 years leading accessibility strategy at JPMorgan Chase. Now bringing enterprise-quality auditing to small businesses." />
       </Helmet>
 
       <section className="pt-20 pb-16 px-4 bg-muted/30">

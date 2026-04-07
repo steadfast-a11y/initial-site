@@ -9,6 +9,13 @@ export default function OverlaysDontWork() {
       <Helmet>
         <title>Why Accessibility Overlays Don't Protect You | Steadfast Accessibility</title>
         <meta name="description" content="The truth about accessibility widgets, the FTC fines, and why courts consider them a barrier to access." />
+        <meta property="og:title" content="Why Accessibility Overlays Don't Protect You (And Can Make Things Worse)" />
+        <meta property="og:description" content="The FTC fined accessiBe $1M. UserWay faces a class action. 25% of lawsuits cite overlays as barriers. Here's what actually works." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://steadfast-accessibility.com/resources/overlays-dont-work" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Why Accessibility Overlays Don't Protect You (And Can Make Things Worse)" />
+        <meta name="twitter:description" content="The FTC fined accessiBe $1M. UserWay faces a class action. 25% of lawsuits cite overlays as barriers." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

@@ -7,8 +7,15 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Homepage | Steadfast Accessibility</title>
-        <meta name="description" content="Steadfast Accessibility helps small businesses respond to ADA website lawsuits and fix accessibility issues." />
+        <title>ADA Website Accessibility Help for Small Business | Steadfast Accessibility</title>
+        <meta name="description" content="Steadfast Accessibility helps small businesses respond to ADA website lawsuits. Get a plain-English remediation plan from an expert with 13 years at JPMorgan Chase." />
+        <meta property="og:title" content="ADA Website Accessibility Help for Small Business | Steadfast Accessibility" />
+        <meta property="og:description" content="Got an ADA demand letter? Steadfast Accessibility finds what's broken, tells you exactly how to fix it in plain English, and gives your attorney the documentation they need." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://steadfast-accessibility.com/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="ADA Website Accessibility Help for Small Business | Steadfast Accessibility" />
+        <meta name="twitter:description" content="Got an ADA demand letter? We find what's broken, tell you how to fix it in plain English, and give your attorney the documentation they need." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

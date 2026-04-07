@@ -28,8 +28,15 @@ export default function Resources() {
   return (
     <>
       <Helmet>
-        <title>Resources & Guides | Steadfast Accessibility</title>
-        <meta name="description" content="Expert articles and guides on ADA website compliance, demand letters, and accessibility remediation." />
+        <title>ADA Accessibility Resources for Small Business | Steadfast Accessibility</title>
+        <meta name="description" content="Expert guides on ADA demand letters, why accessibility overlays fail, and what WCAG 2.1 AA compliance means for your business." />
+        <meta property="og:title" content="ADA Accessibility Resources for Small Business | Steadfast Accessibility" />
+        <meta property="og:description" content="Guides on ADA demand letters, why accessibility overlays fail, and what WCAG 2.1 AA compliance means for your business." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://steadfast-accessibility.com/resources" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="ADA Accessibility Resources for Small Business | Steadfast Accessibility" />
+        <meta name="twitter:description" content="Guides on ADA demand letters, why accessibility overlays fail, and what WCAG 2.1 AA compliance means for your business." />
       </Helmet>
 
       <section className="pt-20 pb-16 px-4 bg-muted/30 border-b border-border">

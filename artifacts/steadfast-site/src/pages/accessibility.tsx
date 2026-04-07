@@ -5,7 +5,14 @@ export default function Accessibility() {
     <>
       <Helmet>
         <title>Accessibility Statement | Steadfast Accessibility</title>
-        <meta name="description" content="The accessibility statement for Steadfast Accessibility LLC." />
+        <meta name="description" content="Steadfast Accessibility is committed to WCAG 2.1 AA standards. Learn how to report accessibility issues and our commitment to ongoing improvement." />
+        <meta property="og:title" content="Accessibility Statement | Steadfast Accessibility" />
+        <meta property="og:description" content="This website is built to WCAG 2.1 AA standards. Learn how to report accessibility issues." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://steadfast-accessibility.com/accessibility" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Accessibility Statement | Steadfast Accessibility" />
+        <meta name="twitter:description" content="This website is built to WCAG 2.1 AA standards. Learn how to report accessibility issues." />
       </Helmet>
 
       <section className="py-20 px-4 bg-background min-h-screen">

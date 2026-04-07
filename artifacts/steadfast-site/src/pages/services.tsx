@@ -7,8 +7,15 @@ export default function Services() {
   return (
     <>
       <Helmet>
-        <title>Services | Steadfast Accessibility</title>
-        <meta name="description" content="Steadfast Accessibility offers three tiers of accessibility auditing and remediation to help small businesses respond to ADA lawsuits." />
+        <title>ADA Accessibility Audit Services & Pricing | Steadfast Accessibility</title>
+        <meta name="description" content="Three tiers of ADA accessibility auditing and remediation for small businesses: Panic Button ($2,500), Fix It Right ($5,000), and Stay Protected ($8,000)." />
+        <meta property="og:title" content="ADA Accessibility Audit Services & Pricing | Steadfast Accessibility" />
+        <meta property="og:description" content="Enterprise-quality accessibility audits at small business prices. Three tiers from $2,500–$8,000 with plain-English remediation playbooks." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://steadfast-accessibility.com/services" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="ADA Accessibility Audit Services & Pricing | Steadfast Accessibility" />
+        <meta name="twitter:description" content="Enterprise-quality accessibility audits at small business prices. Three tiers from $2,500–$8,000." />
       </Helmet>
 
       <section className="pt-20 pb-16 px-4 bg-muted/30">

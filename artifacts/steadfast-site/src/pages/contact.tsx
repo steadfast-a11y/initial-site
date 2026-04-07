@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useSubmitContactForm } from "@workspace/api-client-react";
+import { useSubmitContactForm, ContactFormBodyBudgetRange, ContactFormBodyTimeline } from "@workspace/api-client-react";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -11,21 +11,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CheckCircle2, AlertCircle } from "lucide-react";
 
-// Use identical enums to the backend schema
-const BUDGET_OPTIONS = [
-  "Under $2,500",
-  "$2,500–$5,000",
-  "$5,000–$8,000",
-  "$8,000+",
-  "Not sure yet"
-] as const;
-
-const TIMELINE_OPTIONS = [
-  "Urgent — I have a demand letter",
-  "Within 30 days",
-  "Within 90 days",
-  "Just exploring"
-] as const;
+const BUDGET_OPTIONS = Object.values(ContactFormBodyBudgetRange) as [string, ...string[]];
+const TIMELINE_OPTIONS = Object.values(ContactFormBodyTimeline) as [string, ...string[]];
 
 const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -58,8 +45,8 @@ export default function Contact() {
     submitMutation.mutate({ 
       data: {
         ...data,
-        budgetRange: data.budgetRange as any, // Cast to match generated API types
-        timeline: data.timeline as any
+        budgetRange: data.budgetRange as ContactFormBodyBudgetRange | undefined,
+        timeline: data.timeline as ContactFormBodyTimeline | undefined,
       } 
     }, {
       onSuccess: () => {
@@ -72,8 +59,15 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact Us | Steadfast Accessibility</title>
-        <meta name="description" content="Contact Steadfast Accessibility for help with ADA demand letters and website compliance." />
+        <title>Get Help With Your ADA Demand Letter | Steadfast Accessibility</title>
+        <meta name="description" content="Got an ADA demand letter or accessibility complaint? Tell us about your situation and we'll get back to you within one business day." />
+        <meta property="og:title" content="Get Help With Your ADA Demand Letter | Steadfast Accessibility" />
+        <meta property="og:description" content="Tell us about your situation. We respond within one business day. A 15-minute call costs you nothing. A lawsuit costs $60,000–$200,000+." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://steadfast-accessibility.com/contact" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Get Help With Your ADA Demand Letter | Steadfast Accessibility" />
+        <meta name="twitter:description" content="Tell us about your situation. We respond within one business day." />
       </Helmet>
 
       <section className="pt-20 pb-16 px-4 bg-muted/30">

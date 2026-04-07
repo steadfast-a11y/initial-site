@@ -9,6 +9,13 @@ export default function AdaDemandLetter() {
       <Helmet>
         <title>I Got an ADA Demand Letter About My Website — Now What? | Steadfast Accessibility</title>
         <meta name="description" content="A practical guide on what an ADA demand letter means, immediate steps to take, and how to protect your business." />
+        <meta property="og:title" content="I Got an ADA Demand Letter About My Website — Now What?" />
+        <meta property="og:description" content="Don't panic. A practical guide on what an ADA demand letter means, immediate steps to take, and how to protect your business legally and technically." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://steadfast-accessibility.com/resources/ada-demand-letter" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="I Got an ADA Demand Letter About My Website — Now What?" />
+        <meta name="twitter:description" content="Don't panic. A practical guide on what an ADA demand letter means, immediate steps to take, and how to protect your business." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
