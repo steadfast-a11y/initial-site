@@ -24,7 +24,7 @@ export const SubmitContactFormBody = zod.object({
   name: zod.string().min(1),
   email: zod.string().email(),
   company: zod.string().optional(),
-  websiteUrl: zod.string(),
+  websiteUrl: zod.string().url(),
   budgetRange: zod
     .enum([
       "Under $2,500",

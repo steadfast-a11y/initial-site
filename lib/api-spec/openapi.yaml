@@ -73,6 +73,7 @@ components:
           type: string
         websiteUrl:
           type: string
+          format: uri
         budgetRange:
           type: string
           enum:
