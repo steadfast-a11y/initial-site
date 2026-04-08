@@ -61,17 +61,18 @@ function CheckI({ invertText }: { invertText: boolean }) {
         aria-hidden="true"
         style={{
           position: "absolute",
-          top: "0.03em",
+          top: "-0.2em",
           left: "50%",
           transform: "translateX(-50%)",
-          width: "0.3em",
-          height: "0.2em",
+          width: "1.05em",
+          height: "0.75em",
+          overflow: "visible",
         }}
       >
         <polyline
           points="2.5,10 8,16.5 17.5,3.5"
           stroke={GOLD}
-          strokeWidth="4"
+          strokeWidth="3"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
