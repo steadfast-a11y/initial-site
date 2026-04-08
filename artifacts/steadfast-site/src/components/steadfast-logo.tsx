@@ -64,7 +64,7 @@ function CheckI({ invertText }: { invertText: boolean }) {
           position: "absolute",
           top: "-0.28em",
           left: "50%",
-          transform: "translateX(-45%)",
+          transform: "translateX(-38%)",
           width: "0.85em",
           height: "0.6em",
           overflow: "visible",
