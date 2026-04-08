@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SteadfastLogo } from "@/components/steadfast-logo";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -34,8 +35,8 @@ export default function Layout({ children }: LayoutProps) {
       
       <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-          <Link href="/" className="font-serif font-bold text-2xl tracking-tight text-primary flex-shrink-0">
-            Steadfast<br className="sm:hidden" /><span className="hidden sm:inline"> </span>Accessibility
+          <Link href="/" className="flex-shrink-0 leading-none" aria-label="Steadfast Accessibility – home">
+            <SteadfastLogo style={{ fontSize: "1.35rem" }} />
           </Link>
 
           {/* Desktop Nav */}
@@ -95,8 +96,8 @@ export default function Layout({ children }: LayoutProps) {
       <footer className="bg-primary text-primary-foreground py-16 mt-auto">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="font-serif font-bold text-2xl tracking-tight mb-4 inline-block">
-              Steadfast Accessibility
+            <Link href="/" className="mb-4 inline-block leading-none">
+              <SteadfastLogo invertText style={{ fontSize: "1.35rem" }} />
             </Link>
             <p className="text-primary-foreground/80 max-w-sm mb-6">
               Expert-led accessibility remediation for small businesses facing legal threats.
