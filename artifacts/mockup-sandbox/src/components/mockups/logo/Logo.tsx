@@ -24,11 +24,11 @@ function DottedI() {
       <span
         style={{
           position: "absolute",
-          top: "0.07em",
+          top: "0.04em",
           left: "50%",
           transform: "translateX(-50%)",
-          width: "0.14em",
-          height: "0.14em",
+          width: "0.2em",
+          height: "0.2em",
           borderRadius: "50%",
           background: GOLD,
           display: "block",
@@ -49,18 +49,18 @@ function Checkmark({ color = GOLD }: { color?: string }) {
       fill="none"
       aria-hidden="true"
       style={{
-        width: "0.58em",
-        height: "0.58em",
+        width: "0.72em",
+        height: "0.72em",
         flexShrink: 0,
         display: "inline-block",
         verticalAlign: "middle",
-        marginBottom: "0.08em",
+        marginBottom: "0.04em",
       }}
     >
       <polyline
         points="2.5,10 8,16.5 17.5,3.5"
         stroke={color}
-        strokeWidth="3.2"
+        strokeWidth="4"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -77,7 +77,7 @@ function LogoMark({ invertText = false }: { invertText?: boolean }) {
         fontFamily: "'Nunito', 'Poppins', 'Montserrat', sans-serif",
         fontWeight: 800,
         color: textColor,
-        lineHeight: 1.1,
+        lineHeight: 1,
         letterSpacing: "-0.01em",
         display: "inline-block",
       }}
@@ -86,13 +86,13 @@ function LogoMark({ invertText = false }: { invertText?: boolean }) {
         style={{
           display: "flex",
           alignItems: "center",
-          gap: "0.2em",
+          gap: "0.15em",
         }}
       >
         <span>Steadfast</span>
         <Checkmark color={GOLD} />
       </div>
-      <div>
+      <div style={{ marginTop: "-0.05em" }}>
         {ACCESS_CHARS.map((char, idx) =>
           char === "i" ? (
             <DottedI key={idx} />
