@@ -31,13 +31,17 @@ export default function Home() {
         </script>
       </Helmet>
 
+      {/* Full-width Alert Banner */}
+      <div className="w-full bg-destructive/10 border-b border-destructive/20 py-2.5 px-4">
+        <div className="flex items-center justify-center gap-2 text-sm font-medium text-destructive">
+          <AlertTriangle className="w-4 h-4 shrink-0" aria-hidden="true" />
+          <span>5,100+ ADA website lawsuits filed in 2025. Is your business next?</span>
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 px-4 bg-muted/30">
+      <section className="pt-16 pb-16 md:pt-24 md:pb-24 px-4 bg-muted/30">
         <div className="container mx-auto max-w-5xl text-center">
-          <div className="inline-flex items-center justify-center px-4 py-1.5 mb-8 text-sm font-medium rounded-full bg-destructive/10 text-destructive border border-destructive/20">
-            <AlertTriangle className="w-4 h-4 mr-2" />
-            5,100+ ADA website lawsuits filed in 2025. Is your business next?
-          </div>
           <h1 className="text-5xl md:text-7xl font-serif font-bold tracking-tight text-foreground mb-8 text-balance">
             Your Website Got You Sued.<br className="hidden md:block" /> We'll Help You Fix It.
           </h1>
