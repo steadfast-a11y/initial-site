@@ -32,8 +32,8 @@ export default function Home() {
       </Helmet>
 
       {/* Full-width Alert Banner */}
-      <div className="w-full bg-destructive/10 border-b border-destructive/20 py-2.5 px-4">
-        <div className="flex items-center justify-center gap-2 text-sm font-medium text-destructive">
+      <div role="note" className="w-full bg-destructive/10 border-b border-destructive/20 py-2.5 px-4">
+        <div className="flex items-center justify-center gap-2 text-sm font-medium text-red-800">
           <AlertTriangle className="w-4 h-4 shrink-0" aria-hidden="true" />
           <span>5,100+ ADA website lawsuits filed in 2025. Is your business next?</span>
         </div>
