@@ -3,24 +3,9 @@ const GOLD = "#B89650";
 
 function DottedI() {
   return (
-    <span
-      style={{
-        position: "relative",
-        display: "inline-block",
-        lineHeight: 1,
-      }}
-    >
+    <span style={{ position: "relative", display: "inline-block", lineHeight: 1 }}>
       <span style={{ visibility: "hidden" }}>i</span>
-      <span
-        style={{
-          position: "absolute",
-          inset: 0,
-          color: NAVY,
-          lineHeight: 1,
-        }}
-      >
-        ı
-      </span>
+      <span style={{ position: "absolute", inset: 0, color: NAVY, lineHeight: 1 }}>ı</span>
       <span
         style={{
           position: "absolute",
@@ -38,38 +23,43 @@ function DottedI() {
   );
 }
 
+function CheckI() {
+  return (
+    <span style={{ position: "relative", display: "inline-block", lineHeight: 1 }}>
+      <span style={{ visibility: "hidden" }}>i</span>
+      <span style={{ position: "absolute", inset: 0, color: NAVY, lineHeight: 1 }}>ı</span>
+      <svg
+        viewBox="0 0 20 20"
+        fill="none"
+        style={{
+          position: "absolute",
+          top: "0.03em",
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "0.3em",
+          height: "0.2em",
+        }}
+      >
+        <polyline
+          points="2.5,10 8,16.5 17.5,3.5"
+          stroke={GOLD}
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </span>
+  );
+}
+
+// "Accessibility": 3 i's — first two get gold dots, third gets a gold checkmark
 const ACCESS_CHARS = [
   "A","c","c","e","s","s","i","b","i","l","i","t","y",
 ] as const;
 
-function Checkmark({ color = GOLD }: { color?: string }) {
-  return (
-    <svg
-      viewBox="0 0 20 20"
-      fill="none"
-      aria-hidden="true"
-      style={{
-        width: "0.72em",
-        height: "0.72em",
-        flexShrink: 0,
-        display: "inline-block",
-        verticalAlign: "middle",
-        marginBottom: "0.04em",
-      }}
-    >
-      <polyline
-        points="2.5,10 8,16.5 17.5,3.5"
-        stroke={color}
-        strokeWidth="4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
 function LogoMark({ invertText = false }: { invertText?: boolean }) {
   const textColor = invertText ? "#fff" : NAVY;
+  let iCount = 0;
 
   return (
     <div
@@ -82,26 +72,19 @@ function LogoMark({ invertText = false }: { invertText?: boolean }) {
         display: "inline-block",
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "0.15em",
-        }}
-      >
-        <span>Steadfast</span>
-        <Checkmark color={GOLD} />
-      </div>
+      {/* Line 1: "Steadfast" — no separate checkmark */}
+      <div>Steadfast</div>
+      {/* Line 2: "Accessibility" — 2 dots + 1 checkmark */}
       <div style={{ marginTop: "-0.05em" }}>
-        {ACCESS_CHARS.map((char, idx) =>
-          char === "i" ? (
-            <DottedI key={idx} />
-          ) : (
-            <span key={idx} style={{ color: textColor }}>
-              {char}
-            </span>
-          )
-        )}
+        {ACCESS_CHARS.map((char, idx) => {
+          if (char === "i") {
+            iCount += 1;
+            return iCount < 3
+              ? <DottedI key={idx} />
+              : <CheckI key={idx} />;
+          }
+          return <span key={idx} style={{ color: textColor }}>{char}</span>;
+        })}
       </div>
     </div>
   );
@@ -123,17 +106,7 @@ export function Logo() {
       }}
     >
       <section>
-        <p
-          style={{
-            color: "#bbb",
-            fontSize: "11px",
-            fontFamily: "system-ui, sans-serif",
-            marginBottom: "18px",
-            marginTop: 0,
-            textTransform: "uppercase",
-            letterSpacing: "0.08em",
-          }}
-        >
+        <p style={{ color: "#bbb", fontSize: "11px", fontFamily: "system-ui, sans-serif", marginBottom: "18px", marginTop: 0, textTransform: "uppercase", letterSpacing: "0.08em" }}>
           Nav / header size
         </p>
         <div style={{ fontSize: "26px" }}>
@@ -144,17 +117,7 @@ export function Logo() {
       <div style={{ width: "100%", height: "1px", background: "#f2f2f2" }} />
 
       <section>
-        <p
-          style={{
-            color: "#bbb",
-            fontSize: "11px",
-            fontFamily: "system-ui, sans-serif",
-            marginBottom: "18px",
-            marginTop: 0,
-            textTransform: "uppercase",
-            letterSpacing: "0.08em",
-          }}
-        >
+        <p style={{ color: "#bbb", fontSize: "11px", fontFamily: "system-ui, sans-serif", marginBottom: "18px", marginTop: 0, textTransform: "uppercase", letterSpacing: "0.08em" }}>
           Large / hero size
         </p>
         <div style={{ fontSize: "68px" }}>
@@ -165,25 +128,9 @@ export function Logo() {
       <div style={{ width: "100%", height: "1px", background: "#f2f2f2" }} />
 
       <section
-        style={{
-          background: NAVY,
-          padding: "40px 48px",
-          borderRadius: "12px",
-          width: "100%",
-          boxSizing: "border-box",
-        }}
+        style={{ background: NAVY, padding: "40px 48px", borderRadius: "12px", width: "100%", boxSizing: "border-box" }}
       >
-        <p
-          style={{
-            color: "rgba(255,255,255,0.35)",
-            fontSize: "11px",
-            fontFamily: "system-ui, sans-serif",
-            marginBottom: "18px",
-            marginTop: 0,
-            textTransform: "uppercase",
-            letterSpacing: "0.08em",
-          }}
-        >
+        <p style={{ color: "rgba(255,255,255,0.35)", fontSize: "11px", fontFamily: "system-ui, sans-serif", marginBottom: "18px", marginTop: 0, textTransform: "uppercase", letterSpacing: "0.08em" }}>
           On dark / navy background
         </p>
         <div style={{ fontSize: "48px" }}>
