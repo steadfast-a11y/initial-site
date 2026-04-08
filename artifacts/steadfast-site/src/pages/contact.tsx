@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useSubmitContactForm, ContactFormBodyBudgetRange, ContactFormBodyTimeline } from "@workspace/api-client-react";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -11,8 +10,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CheckCircle2, AlertCircle } from "lucide-react";
 
-const BUDGET_OPTIONS = Object.values(ContactFormBodyBudgetRange) as [string, ...string[]];
-const TIMELINE_OPTIONS = Object.values(ContactFormBodyTimeline) as [string, ...string[]];
+const BUDGET_OPTIONS = ["Under $2,500", "$2,500–$5,000", "$5,000–$8,000", "$8,000+", "Not sure yet"] as const;
+const TIMELINE_OPTIONS = ["Urgent — I have a demand letter", "Within 30 days", "Within 90 days", "Just exploring"] as const;
 
 const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -26,9 +25,12 @@ const contactFormSchema = z.object({
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mjgpzydl";
+
 export default function Contact() {
   const [isSuccess, setIsSuccess] = useState(false);
-  const submitMutation = useSubmitContactForm();
+  const [isError, setIsError] = useState(false);
+  const [isPending, setIsPending] = useState(false);
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -41,19 +43,26 @@ export default function Contact() {
     },
   });
 
-  function onSubmit(data: ContactFormValues) {
-    submitMutation.mutate({ 
-      data: {
-        ...data,
-        budgetRange: data.budgetRange as ContactFormBodyBudgetRange | undefined,
-        timeline: data.timeline as ContactFormBodyTimeline | undefined,
-      } 
-    }, {
-      onSuccess: () => {
+  async function onSubmit(data: ContactFormValues) {
+    setIsPending(true);
+    setIsError(false);
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (response.ok) {
         setIsSuccess(true);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        setIsError(true);
       }
-    });
+    } catch {
+      setIsError(true);
+    } finally {
+      setIsPending(false);
+    }
   }
 
   return (
@@ -95,8 +104,8 @@ export default function Contact() {
             </div>
           ) : (
             <div className="bg-card rounded-2xl border border-border shadow-sm p-6 md:p-10">
-              
-              {submitMutation.isError && (
+
+              {isError && (
                 <div className="mb-8 p-4 bg-destructive/10 border border-destructive/20 text-destructive rounded-lg flex items-start gap-3">
                   <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
                   <div>
@@ -108,7 +117,7 @@ export default function Contact() {
 
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormField
                       control={form.control}
@@ -221,10 +230,10 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel>Tell us about your situation *</FormLabel>
                         <FormControl>
-                          <Textarea 
-                            placeholder="What's going on? Received a demand letter? Customer complaint? Just want to get ahead of it? The more context you share, the better we can help." 
+                          <Textarea
+                            placeholder="What's going on? Received a demand letter? Customer complaint? Just want to get ahead of it? The more context you share, the better we can help."
                             className="min-h-[150px]"
-                            {...field} 
+                            {...field}
                           />
                         </FormControl>
                         <FormMessage />
@@ -232,8 +241,8 @@ export default function Contact() {
                     )}
                   />
 
-                  <Button type="submit" size="lg" className="w-full h-14 text-lg" disabled={submitMutation.isPending}>
-                    {submitMutation.isPending ? "Sending..." : "Submit Inquiry"}
+                  <Button type="submit" size="lg" className="w-full h-14 text-lg" disabled={isPending}>
+                    {isPending ? "Sending..." : "Submit Inquiry"}
                   </Button>
                 </form>
               </Form>
