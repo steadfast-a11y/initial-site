@@ -34,9 +34,9 @@ function CheckI() {
         preserveAspectRatio="none"
         style={{
           position: "absolute",
-          top: "-0.35em",
+          top: "-0.28em",
           left: "50%",
-          transform: "translateX(-50%)",
+          transform: "translateX(-58%)",
           width: "0.85em",
           height: "0.6em",
           overflow: "visible",
@@ -45,7 +45,7 @@ function CheckI() {
         <polyline
           points="2.5,10 8,16.5 17.5,3.5"
           stroke={GOLD}
-          strokeWidth="5"
+          strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
