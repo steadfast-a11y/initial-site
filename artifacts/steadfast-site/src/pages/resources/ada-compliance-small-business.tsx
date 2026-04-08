@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import danPhoto from "@assets/300x300_1775608612304.png";
 
 export default function AdaComplianceSmallBusiness() {
   return (
@@ -40,7 +41,7 @@ export default function AdaComplianceSmallBusiness() {
               ADA Website Compliance for Small Business: What You Actually Need to Know
             </h1>
             <div className="flex items-center gap-4 text-muted-foreground border-b border-border pb-8">
-              <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center font-serif font-bold text-foreground">DH</div>
+              <img src={danPhoto} alt="Dan Harrison" className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
               <div>
                 <div className="font-medium text-foreground">Dan Harrison</div>
                 <div className="text-sm">IAAP CPACC, DHS Trusted Tester</div>

@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import danPhoto from "@assets/300x300_1775608612304.png";
 
 export default function About() {
   return (
@@ -31,11 +32,8 @@ export default function About() {
         <div className="container mx-auto max-w-5xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             <div>
-              <div className="aspect-square bg-muted rounded-2xl mb-8 flex items-center justify-center border-4 border-muted shadow-lg overflow-hidden relative">
-                {/* Fallback for Dan's photo */}
-                <div className="absolute inset-0 bg-primary/5 flex items-center justify-center">
-                  <span className="text-9xl font-serif text-primary/20">DH</span>
-                </div>
+              <div className="aspect-square rounded-2xl mb-8 border-4 border-muted shadow-lg overflow-hidden">
+                <img src={danPhoto} alt="Dan Harrison, founder of Steadfast Accessibility" className="w-full h-full object-cover object-top" />
               </div>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-muted rounded-full text-xs font-medium">DHS Trusted Tester v5</span>

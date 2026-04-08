@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import { ArrowRight, CheckCircle2, ShieldAlert, Zap, AlertTriangle, FileText, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import danPhoto from "@assets/300x300_1775608612304.png";
 
 export default function Home() {
   return (
@@ -245,7 +246,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
             <div className="md:col-span-4 flex justify-center">
               <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden bg-primary/10 border-4 border-background shadow-lg">
-                <div className="w-full h-full bg-muted flex items-center justify-center text-4xl font-serif text-muted-foreground">DH</div>
+                <img src={danPhoto} alt="Dan Harrison, founder of Steadfast Accessibility" className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="md:col-span-8">
