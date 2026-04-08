@@ -61,11 +61,11 @@ function CheckI({ invertText }: { invertText: boolean }) {
         aria-hidden="true"
         style={{
           position: "absolute",
-          top: "-0.2em",
+          top: "-0.35em",
           left: "50%",
           transform: "translateX(-50%)",
-          width: "1.05em",
-          height: "0.75em",
+          width: "0.85em",
+          height: "0.6em",
           overflow: "visible",
         }}
       >
