@@ -117,7 +117,7 @@ export function SteadfastLogo({ invertText = false, className, style }: Steadfas
         Steadfast
       </span>
       {/* Line 2: "Accessibility" with 2 gold dots + 1 gold checkmark as dots */}
-      <span style={{ display: "block", marginTop: "-0.05em" }} aria-hidden="true">
+      <span style={{ display: "block", marginTop: "-0.1em" }} aria-hidden="true">
         {ACCESS_CHARS.map((char, idx) => {
           if (char === "i") {
             iCount += 1;

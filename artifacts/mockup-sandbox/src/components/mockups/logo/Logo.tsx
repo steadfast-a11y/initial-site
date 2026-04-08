@@ -77,7 +77,7 @@ function LogoMark({ invertText = false }: { invertText?: boolean }) {
       {/* Line 1: "Steadfast" — no separate checkmark */}
       <div>Steadfast</div>
       {/* Line 2: "Accessibility" — 2 dots + 1 checkmark */}
-      <div style={{ marginTop: "-0.05em" }}>
+      <div style={{ marginTop: "-0.1em" }}>
         {ACCESS_CHARS.map((char, idx) => {
           if (char === "i") {
             iCount += 1;
