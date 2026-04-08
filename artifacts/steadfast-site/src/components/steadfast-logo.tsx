@@ -58,6 +58,7 @@ function CheckI({ invertText }: { invertText: boolean }) {
       <svg
         viewBox="0 0 20 20"
         fill="none"
+        preserveAspectRatio="none"
         aria-hidden="true"
         style={{
           position: "absolute",
@@ -72,7 +73,7 @@ function CheckI({ invertText }: { invertText: boolean }) {
         <polyline
           points="2.5,10 8,16.5 17.5,3.5"
           stroke={GOLD}
-          strokeWidth="3"
+          strokeWidth="5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
