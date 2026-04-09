@@ -15,7 +15,7 @@ export function SteadfastLogo({ invertText = false, className, style }: Steadfas
     <span
       className={className}
       style={{
-        fontFamily: "'Nunito', 'Poppins', 'Montserrat', sans-serif",
+        fontFamily: "'Plus Jakarta Sans', 'Poppins', 'Montserrat', sans-serif",
         fontWeight: 800,
         color: textColor,
         lineHeight: 1,
