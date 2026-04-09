@@ -8,12 +8,12 @@ export default function AdaComplianceSmallBusiness() {
   return (
     <>
       <Helmet>
-        <title>ADA Website Compliance for Small Business: What You Need to Know | Steadfast Accessibility</title>
+        <title>ADA Website Compliance for Small Business: What You Need to Know | Let Everyone In</title>
         <meta name="description" content="What ADA Title III requires for websites, what WCAG 2.1 AA means in plain English, who's most at risk, and how to get started." />
         <meta property="og:title" content="ADA Website Compliance for Small Business: What You Actually Need to Know" />
         <meta property="og:description" content="What ADA Title III requires, what WCAG 2.1 AA means in plain English, who's most at risk, and how to protect your business." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://steadfast-accessibility.com/resources/ada-compliance-small-business" />
+        <meta property="og:url" content="https://leteveryonein.com/resources/ada-compliance-small-business" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="ADA Website Compliance for Small Business: What You Actually Need to Know" />
         <meta name="twitter:description" content="What ADA Title III requires, what WCAG 2.1 AA means in plain English, who's most at risk, and how to protect your business." />

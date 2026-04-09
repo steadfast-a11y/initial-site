@@ -68,14 +68,14 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Get Help With Your ADA Demand Letter | Steadfast Accessibility</title>
+        <title>Get Help With Your ADA Demand Letter | Let Everyone In</title>
         <meta name="description" content="Got an ADA demand letter or accessibility complaint? Tell us about your situation and we'll get back to you within one business day." />
-        <meta property="og:title" content="Get Help With Your ADA Demand Letter | Steadfast Accessibility" />
+        <meta property="og:title" content="Get Help With Your ADA Demand Letter | Let Everyone In" />
         <meta property="og:description" content="Tell us about your situation. We respond within one business day. A 15-minute call costs you nothing. A lawsuit costs $60,000–$200,000+." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://steadfast-accessibility.com/contact" />
+        <meta property="og:url" content="https://leteveryonein.com/contact" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Get Help With Your ADA Demand Letter | Steadfast Accessibility" />
+        <meta name="twitter:title" content="Get Help With Your ADA Demand Letter | Let Everyone In" />
         <meta name="twitter:description" content="Tell us about your situation. We respond within one business day." />
       </Helmet>
 
@@ -110,7 +110,7 @@ export default function Contact() {
                   <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-semibold">There was an error submitting the form</h4>
-                    <p className="text-sm mt-1">Please try again or email us directly at dan@steadfast-accessibility.com.</p>
+                    <p className="text-sm mt-1">Please try again or email us directly at dan@leteveryonein.com.</p>
                   </div>
                 </div>
               )}
@@ -248,7 +248,7 @@ export default function Contact() {
               </Form>
 
               <div className="mt-8 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground text-center md:text-left">
-                <div>dan@steadfast-accessibility.com</div>
+                <div>dan@leteveryonein.com</div>
                 <div>We respond within one business day.</div>
                 <div>Your information is confidential.</div>
               </div>

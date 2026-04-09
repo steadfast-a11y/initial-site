@@ -3,41 +3,6 @@ import type React from "react";
 const NAVY = "#1e2060";
 const GOLD = "#B89650";
 
-function DottedI({ invertText }: { invertText: boolean }) {
-  const bodyColor = invertText ? "#fff" : NAVY;
-  return (
-    <span
-      style={{
-        position: "relative",
-        display: "inline-block",
-        lineHeight: 1,
-      }}
-    >
-      <span style={{ visibility: "hidden" }}>i</span>
-      <span
-        style={{ position: "absolute", inset: 0, color: bodyColor, lineHeight: 1 }}
-        aria-hidden="true"
-      >
-        ı
-      </span>
-      <span
-        style={{
-          position: "absolute",
-          top: "0.04em",
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "0.23em",
-          height: "0.23em",
-          borderRadius: "50%",
-          background: GOLD,
-          display: "block",
-        }}
-        aria-hidden="true"
-      />
-    </span>
-  );
-}
-
 function CheckI({ invertText }: { invertText: boolean }) {
   const bodyColor = invertText ? "#fff" : NAVY;
   return (
@@ -48,12 +13,12 @@ function CheckI({ invertText }: { invertText: boolean }) {
         lineHeight: 1,
       }}
     >
-      <span style={{ visibility: "hidden" }}>i</span>
+      <span style={{ visibility: "hidden" }}>I</span>
       <span
         style={{ position: "absolute", inset: 0, color: bodyColor, lineHeight: 1 }}
         aria-hidden="true"
       >
-        ı
+        I
       </span>
       <svg
         viewBox="0 0 20 20"
@@ -82,12 +47,6 @@ function CheckI({ invertText }: { invertText: boolean }) {
   );
 }
 
-// "Accessibility": indices 6, 8, 10 are the three "i" characters
-// First two get a gold dot; the third gets a gold checkmark as the dot
-const ACCESS_CHARS = [
-  "A","c","c","e","s","s","i","b","i","l","i","t","y",
-] as const;
-
 interface SteadfastLogoProps {
   invertText?: boolean;
   className?: string;
@@ -96,7 +55,6 @@ interface SteadfastLogoProps {
 
 export function SteadfastLogo({ invertText = false, className, style }: SteadfastLogoProps) {
   const textColor = invertText ? "#fff" : NAVY;
-  let iCount = 0;
 
   return (
     <span
@@ -110,27 +68,16 @@ export function SteadfastLogo({ invertText = false, className, style }: Steadfas
         display: "inline-block",
         ...style,
       }}
-      aria-label="Steadfast Accessibility"
+      aria-label="Let Everyone In"
     >
-      {/* Line 1: "Steadfast" — no separate checkmark */}
+      {/* Line 1: "Let Everyone" */}
       <span style={{ display: "block" }} aria-hidden="true">
-        Steadfast
+        Let Everyone
       </span>
-      {/* Line 2: "Accessibility" with 2 gold dots + 1 gold checkmark as dots */}
+      {/* Line 2: "In" with gold checkmark on the I */}
       <span style={{ display: "block", marginTop: "-0.1em" }} aria-hidden="true">
-        {ACCESS_CHARS.map((char, idx) => {
-          if (char === "i") {
-            iCount += 1;
-            return iCount < 3
-              ? <DottedI key={idx} invertText={invertText} />
-              : <CheckI key={idx} invertText={invertText} />;
-          }
-          return (
-            <span key={idx} style={{ color: textColor }}>
-              {char}
-            </span>
-          );
-        })}
+        <CheckI invertText={invertText} />
+        <span style={{ color: textColor }}>n</span>
       </span>
     </span>
   );
