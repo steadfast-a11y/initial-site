@@ -110,7 +110,7 @@ export default function Contact() {
                   <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-semibold">There was an error submitting the form</h4>
-                    <p className="text-sm mt-1">Please try again or email us directly at dan@leteveryonein.com.</p>
+                    <p className="text-sm mt-1">Please try again or email us directly at dan@LetEveryOneIn.com.</p>
                   </div>
                 </div>
               )}
@@ -248,7 +248,7 @@ export default function Contact() {
               </Form>
 
               <div className="mt-8 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground text-center md:text-left">
-                <div>dan@leteveryonein.com</div>
+                <div>dan@LetEveryOneIn.com</div>
                 <div>We respond within one business day.</div>
                 <div>Your information is confidential.</div>
               </div>

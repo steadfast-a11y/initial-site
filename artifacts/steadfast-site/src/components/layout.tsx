@@ -104,7 +104,7 @@ export default function Layout({ children }: LayoutProps) {
             </p>
             <p className="text-primary-foreground/80 font-medium">
               <a href="mailto:dan@leteveryonein.com" className="hover:underline">
-                dan@leteveryonein.com
+                dan@LetEveryOneIn.com
               </a>
             </p>
           </div>

@@ -37,7 +37,7 @@ export default function Accessibility() {
               We welcome your feedback on the accessibility of this website. Please let us know if you encounter accessibility barriers on our site:
             </p>
             <ul>
-              <li>E-mail: dan@leteveryonein.com</li>
+              <li>E-mail: dan@LetEveryOneIn.com</li>
             </ul>
             <p>
               We try to respond to feedback within 1 business day.
