@@ -4,14 +4,14 @@ export default function Accessibility() {
   return (
     <>
       <Helmet>
-        <title>Accessibility Statement | Let Everyone In</title>
-        <meta name="description" content="Let Everyone In is committed to WCAG 2.1 AA standards. Learn how to report accessibility issues and our commitment to ongoing improvement." />
-        <meta property="og:title" content="Accessibility Statement | Let Everyone In" />
+        <title>Accessibility Statement | Let EveryOne In</title>
+        <meta name="description" content="Let EveryOne In is committed to WCAG 2.1 AA standards. Learn how to report accessibility issues and our commitment to ongoing improvement." />
+        <meta property="og:title" content="Accessibility Statement | Let EveryOne In" />
         <meta property="og:description" content="This website is built to WCAG 2.1 AA standards. Learn how to report accessibility issues." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://leteveryonein.com/accessibility" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Accessibility Statement | Let Everyone In" />
+        <meta name="twitter:title" content="Accessibility Statement | Let EveryOne In" />
         <meta name="twitter:description" content="This website is built to WCAG 2.1 AA standards. Learn how to report accessibility issues." />
       </Helmet>
 
@@ -21,7 +21,7 @@ export default function Accessibility() {
 
           <div className="prose prose-lg dark:prose-invert">
             <p>
-              Let Everyone In (a service of Steadfast Accessibility LLC) is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.
+              Let EveryOne In (a service of Steadfast Accessibility LLC) is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.
             </p>
 
             <h3>Conformance status</h3>

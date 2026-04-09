@@ -7,14 +7,14 @@ export default function Services() {
   return (
     <>
       <Helmet>
-        <title>ADA Accessibility Audit Services & Pricing | Let Everyone In</title>
+        <title>ADA Accessibility Audit Services & Pricing | Let EveryOne In</title>
         <meta name="description" content="Three tiers of ADA accessibility auditing and remediation for small businesses: Panic Button ($2,500), Fix It Right ($5,000), and Stay Protected ($8,000)." />
-        <meta property="og:title" content="ADA Accessibility Audit Services & Pricing | Let Everyone In" />
+        <meta property="og:title" content="ADA Accessibility Audit Services & Pricing | Let EveryOne In" />
         <meta property="og:description" content="Enterprise-quality accessibility audits at small business prices. Three tiers from $2,500–$8,000 with plain-English remediation playbooks." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://leteveryonein.com/services" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="ADA Accessibility Audit Services & Pricing | Let Everyone In" />
+        <meta name="twitter:title" content="ADA Accessibility Audit Services & Pricing | Let EveryOne In" />
         <meta name="twitter:description" content="Enterprise-quality accessibility audits at small business prices. Three tiers from $2,500–$8,000." />
       </Helmet>
 
