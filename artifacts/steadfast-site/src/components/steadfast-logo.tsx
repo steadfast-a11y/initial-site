@@ -13,12 +13,12 @@ function CheckI({ invertText }: { invertText: boolean }) {
         lineHeight: 1,
       }}
     >
-      <span style={{ visibility: "hidden" }}>I</span>
+      <span style={{ visibility: "hidden" }}>i</span>
       <span
         style={{ position: "absolute", inset: 0, color: bodyColor, lineHeight: 1 }}
         aria-hidden="true"
       >
-        I
+        ı
       </span>
       <svg
         viewBox="0 0 20 20"
@@ -70,12 +70,8 @@ export function SteadfastLogo({ invertText = false, className, style }: Steadfas
       }}
       aria-label="Let Everyone In"
     >
-      {/* Line 1: "Let Everyone" */}
-      <span style={{ display: "block" }} aria-hidden="true">
-        Let Everyone
-      </span>
-      {/* Line 2: "In" with gold checkmark on the I */}
-      <span style={{ display: "block", marginTop: "-0.1em" }} aria-hidden="true">
+      <span aria-hidden="true">
+        Let Everyone{" "}
         <CheckI invertText={invertText} />
         <span style={{ color: textColor }}>n</span>
       </span>
