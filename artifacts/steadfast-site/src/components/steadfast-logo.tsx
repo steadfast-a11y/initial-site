@@ -22,7 +22,7 @@ export function SteadfastLogo({ invertText = false, className, style }: Steadfas
         letterSpacing: "-0.01em",
         display: "inline-flex",
         alignItems: "center",
-        gap: "0.45em",
+        gap: "0.2em",
         ...style,
       }}
       aria-label="Let Everyone In"
