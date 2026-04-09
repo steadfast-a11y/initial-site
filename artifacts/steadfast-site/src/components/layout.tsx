@@ -36,7 +36,7 @@ export default function Layout({ children }: LayoutProps) {
       <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           <Link href="/" className="flex-shrink-0 leading-none" aria-label="Let EveryOne In – home">
-            <SteadfastLogo style={{ fontSize: "2.16rem" }} />
+            <SteadfastLogo style={{ fontSize: "1.62rem" }} />
           </Link>
 
           {/* Desktop Nav */}
@@ -97,7 +97,7 @@ export default function Layout({ children }: LayoutProps) {
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="mb-4 inline-block leading-none">
-              <SteadfastLogo invertText style={{ fontSize: "2.16rem" }} />
+              <SteadfastLogo invertText style={{ fontSize: "1.62rem" }} />
             </Link>
             <p className="text-primary-foreground/80 max-w-sm mb-6">
               Expert-led accessibility remediation for small businesses facing legal threats.
