@@ -8,14 +8,14 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>About Dan Harrison | Let EveryOne In</title>
+        <title>About Dan Harrison | Let Everyone In</title>
         <meta name="description" content="13 years as Executive Director of UX Design at JPMorgan Chase. DHS Trusted Tester v5 Certified. IAAP CPACC. Now bringing enterprise-quality accessibility auditing to small businesses." />
-        <meta property="og:title" content="About Dan Harrison | Let EveryOne In" />
+        <meta property="og:title" content="About Dan Harrison | Let Everyone In" />
         <meta property="og:description" content="13 years leading accessibility strategy at JPMorgan Chase. Now bringing enterprise-quality auditing to small businesses at small business prices." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://leteveryonein.com/about" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Dan Harrison | Let EveryOne In" />
+        <meta name="twitter:title" content="About Dan Harrison | Let Everyone In" />
         <meta name="twitter:description" content="13 years leading accessibility strategy at JPMorgan Chase. Now bringing enterprise-quality auditing to small businesses." />
       </Helmet>
 
@@ -33,7 +33,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             <div>
               <div className="aspect-square rounded-2xl mb-8 border-4 border-muted shadow-lg overflow-hidden">
-                <img src={danPhoto} alt="Dan Harrison, founder of Let EveryOne In" className="w-full h-full object-cover object-top" />
+                <img src={danPhoto} alt="Dan Harrison, founder of Let Everyone In" className="w-full h-full object-cover object-top" />
               </div>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-muted rounded-full text-xs font-medium">DHS Trusted Tester v5</span>
@@ -51,7 +51,7 @@ export default function About() {
                 As a founding employee at Razorfish San Francisco during the first dot-com era, Dan has been building for the web since its early days. He is deeply embedded in the San Francisco AI and design community.
               </p>
               <p>
-                He founded Let EveryOne In with a singular mission: to bring enterprise-quality accessibility auditing to small businesses that are facing a crisis.
+                He founded Let Everyone In with a singular mission: to bring enterprise-quality accessibility auditing to small businesses that are facing a crisis.
               </p>
               <p>
                 <strong>Training & Credentials:</strong> Trained by Deque University, WebAIM, and Knowbility AccessU. DHS Trusted Tester v5 Certified, IAAP CPACC, IAAP WAS.

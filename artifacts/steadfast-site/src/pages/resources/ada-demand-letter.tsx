@@ -8,7 +8,7 @@ export default function AdaDemandLetter() {
   return (
     <>
       <Helmet>
-        <title>I Got an ADA Demand Letter About My Website — Now What? | Let EveryOne In</title>
+        <title>I Got an ADA Demand Letter About My Website — Now What? | Let Everyone In</title>
         <meta name="description" content="A practical guide on what an ADA demand letter means, immediate steps to take, and how to protect your business." />
         <meta property="og:title" content="I Got an ADA Demand Letter About My Website — Now What?" />
         <meta property="og:description" content="Don't panic. A practical guide on what an ADA demand letter means, immediate steps to take, and how to protect your business legally and technically." />

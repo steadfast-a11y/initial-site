@@ -28,14 +28,14 @@ export default function Resources() {
   return (
     <>
       <Helmet>
-        <title>ADA Accessibility Resources for Small Business | Let EveryOne In</title>
+        <title>ADA Accessibility Resources for Small Business | Let Everyone In</title>
         <meta name="description" content="Expert guides on ADA demand letters, why accessibility overlays fail, and what WCAG 2.1 AA compliance means for your business." />
-        <meta property="og:title" content="ADA Accessibility Resources for Small Business | Let EveryOne In" />
+        <meta property="og:title" content="ADA Accessibility Resources for Small Business | Let Everyone In" />
         <meta property="og:description" content="Guides on ADA demand letters, why accessibility overlays fail, and what WCAG 2.1 AA compliance means for your business." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://leteveryonein.com/resources" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="ADA Accessibility Resources for Small Business | Let EveryOne In" />
+        <meta name="twitter:title" content="ADA Accessibility Resources for Small Business | Let Everyone In" />
         <meta name="twitter:description" content="Guides on ADA demand letters, why accessibility overlays fail, and what WCAG 2.1 AA compliance means for your business." />
       </Helmet>
 

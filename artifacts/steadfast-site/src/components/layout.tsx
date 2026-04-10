@@ -35,7 +35,7 @@ export default function Layout({ children }: LayoutProps) {
       
       <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-          <Link href="/" className="flex-shrink-0 leading-none" aria-label="Let EveryOne In – home">
+          <Link href="/" className="flex-shrink-0 leading-none" aria-label="Let Everyone In – home">
             <SteadfastLogo style={{ fontSize: "1.62rem" }} />
           </Link>
 
@@ -104,7 +104,7 @@ export default function Layout({ children }: LayoutProps) {
             </p>
             <p className="text-primary-foreground/80 font-medium">
               <a href="mailto:dan@leteveryonein.com" className="hover:underline">
-                dan@LetEveryOneIn.com
+                dan@leteveryonein.com
               </a>
             </p>
           </div>
@@ -130,7 +130,7 @@ export default function Layout({ children }: LayoutProps) {
         
         <div className="container mx-auto px-4 mt-16 pt-8 border-t border-primary-foreground/20 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/60 text-sm">
-            © 2026 Let EveryOne In. A service of Steadfast Accessibility LLC.
+            © 2026 Let Everyone In. A service of Steadfast Accessibility LLC.
           </p>
           <p className="text-primary-foreground/60 text-sm text-center md:text-right">
             This website is built to WCAG 2.1 AA standards — because we practice what we preach.
