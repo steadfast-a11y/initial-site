@@ -8,20 +8,20 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>ADA Website Accessibility Help for Small Business | Let Everyone In</title>
-        <meta name="description" content="Let Everyone In helps small businesses respond to ADA website lawsuits. Get a plain-English remediation plan from an expert with 13 years at JPMorgan Chase." />
-        <meta property="og:title" content="ADA Website Accessibility Help for Small Business | Let Everyone In" />
+        <title>ADA Website Accessibility Help for Small Business | LetEveryoneIn</title>
+        <meta name="description" content="LetEveryoneIn helps small businesses respond to ADA website lawsuits. Get a plain-English remediation plan from an expert with 13 years at JPMorgan Chase." />
+        <meta property="og:title" content="ADA Website Accessibility Help for Small Business | LetEveryoneIn" />
         <meta property="og:description" content="Got an ADA demand letter? We find what's broken, tell you exactly how to fix it in plain English, and give your attorney the documentation they need." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://leteveryonein.com/" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="ADA Website Accessibility Help for Small Business | Let Everyone In" />
+        <meta name="twitter:title" content="ADA Website Accessibility Help for Small Business | LetEveryoneIn" />
         <meta name="twitter:description" content="Got an ADA demand letter? We find what's broken, tell you how to fix it in plain English, and give your attorney the documentation they need." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Let Everyone In",
+            "name": "LetEveryoneIn",
             "url": "https://leteveryonein.com",
             "founder": {
               "@type": "Person",
@@ -174,7 +174,7 @@ export default function Home() {
 
           <div className="bg-primary/5 rounded-2xl border border-primary/20 p-8 text-center max-w-3xl mx-auto">
             <CheckCircle2 className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-2">Let Everyone In fills the gap.</h3>
+            <h3 className="text-2xl font-bold mb-2">LetEveryoneIn fills the gap.</h3>
             <p className="text-lg text-muted-foreground">
               Comprehensive audit + plain-English remediation playbook + implementation support.<br/>
               <strong className="text-foreground mt-2 inline-block">$2,500–$8,000.</strong>
@@ -246,7 +246,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
             <div className="md:col-span-4 flex justify-center">
               <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden bg-primary/10 border-4 border-background shadow-lg">
-                <img src={danPhoto} alt="Dan Harrison, founder of Let Everyone In" className="w-full h-full object-cover" />
+                <img src={danPhoto} alt="Dan Harrison, founder of LetEveryoneIn" className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="md:col-span-8">

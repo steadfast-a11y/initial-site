@@ -68,14 +68,14 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Get Help With Your ADA Demand Letter | Let Everyone In</title>
+        <title>Get Help With Your ADA Demand Letter | LetEveryoneIn</title>
         <meta name="description" content="Got an ADA demand letter or accessibility complaint? Tell us about your situation and we'll get back to you within one business day." />
-        <meta property="og:title" content="Get Help With Your ADA Demand Letter | Let Everyone In" />
+        <meta property="og:title" content="Get Help With Your ADA Demand Letter | LetEveryoneIn" />
         <meta property="og:description" content="Tell us about your situation. We respond within one business day. A 15-minute call costs you nothing. A lawsuit costs $60,000–$200,000+." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://leteveryonein.com/contact" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Get Help With Your ADA Demand Letter | Let Everyone In" />
+        <meta name="twitter:title" content="Get Help With Your ADA Demand Letter | LetEveryoneIn" />
         <meta name="twitter:description" content="Tell us about your situation. We respond within one business day." />
       </Helmet>
 
